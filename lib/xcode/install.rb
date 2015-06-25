@@ -79,7 +79,7 @@ module XcodeInstall
         return
       end
 
-      `sudo ditto "#{source}" "#{xcode_path}"`
+      `sudo ditto --nocache "#{source}" "#{xcode_path}"`
       `umount "/Volumes/Xcode"`
 
       enable_developer_mode
